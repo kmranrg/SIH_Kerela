@@ -51,9 +51,9 @@
       </v-list>
     </v-navigation-drawer>
     <!-- Toolbar -->
-    <v-toolbar color="amber" app absolute clipped-left>
-      <v-toolbar-side-icon @click.native="drawer = !drawer"></v-toolbar-side-icon>
-      <span class="title ml-3 mr-5">Health Advisor</span>
+    <v-toolbar class="indigo darken-4" dark app absolute clipped-left>
+      <v-toolbar-side-icon @click.native.stop="drawer = !drawer"></v-toolbar-side-icon>
+      <span class="title ml-3 mr-5">HospSpot</span>
       <v-text-field class="hidden-sm-and-down"
         solo-inverted
         flat
@@ -66,14 +66,14 @@
     <!-- bottom sheet -->
     <v-content>
       <v-bottom-sheet v-model="sheet">
-      <v-btn slot="activator" color="purple" dark>Click me</v-btn>
+      <v-btn slot="activator" color="indigo darken-4" dark>Click me</v-btn>
       <v-list>
         <v-subheader>Open in</v-subheader>
         <!-- Dialog -->
            <v-dialog v-model="dialog" fullscreen transition="dialog-bottom-transition" :overlay="false">
-              <v-btn color="primary" dark slot="activator">Compare</v-btn>
+              <v-btn color="indigo darken-4" dark slot="activator">Compare</v-btn>
               <v-card>
-                <v-toolbar color="primary" dark>
+                <v-toolbar color="indigo darken-4" dark>
                   <v-btn icon @click.native="dialog = false" dark>
                     <v-icon>close</v-icon>
                   </v-btn>
@@ -86,6 +86,7 @@
                 <!-- comapre table -->
                 <compare-table></compare-table>
                 <app-footer></app-footer>
+                <mobile-footer></mobile-footer>
               </v-card>
             </v-dialog>
       </v-list>
