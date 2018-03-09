@@ -1,5 +1,5 @@
 <template>
-  <v-container grid-list-md style="margin-top: 75px;margin-bottom:75px" >
+  <v-container grid-list-md style="margin-top: 75px" >
     <v-data-iterator
       content-tag="v-layout"
       row
