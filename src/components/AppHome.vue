@@ -51,9 +51,9 @@
       </v-list>
     </v-navigation-drawer>
     <!-- Toolbar -->
-    <v-toolbar color="amber" app absolute clipped-left>
-      <v-toolbar-side-icon @click.native="drawer = !drawer"></v-toolbar-side-icon>
-      <span class="title ml-3 mr-5">Health Advisor</span>
+    <v-toolbar class="purple darken-1" dark app absolute clipped-left>
+      <v-toolbar-side-icon @click.native.stop="drawer = !drawer"></v-toolbar-side-icon>
+      <span class="title ml-3 mr-5">HospSpot</span>
       <v-text-field class="hidden-sm-and-down"
         solo-inverted
         flat
