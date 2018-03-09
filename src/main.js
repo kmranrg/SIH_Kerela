@@ -5,6 +5,9 @@ import App from './App'
 import router from './router'
 import Vuetify from 'vuetify'
 import 'vuetify/dist/vuetify.min.css'
+import CompareTable from "@/components/CompareTable"
+
+Vue.component('compare-table', CompareTable )
 
 Vue.use(Vuetify)
 
