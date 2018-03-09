@@ -54,7 +54,7 @@
     <v-toolbar color="amber" app absolute clipped-left>
       <v-toolbar-side-icon @click.native="drawer = !drawer"></v-toolbar-side-icon>
       <span class="title ml-3 mr-5">Health Advisor</span>
-      <v-text-field
+      <v-text-field class="hidden-sm-and-down"
         solo-inverted
         flat
         label="Search"
