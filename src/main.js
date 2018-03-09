@@ -7,9 +7,11 @@ import Vuetify from 'vuetify'
 import 'vuetify/dist/vuetify.min.css'
 import CompareTable from "@/components/CompareTable"
 import Footer from "@/components/Footer"
+import FooterMobile from "@/components/FooterMobile"
 
 Vue.component('compare-table', CompareTable );
 Vue.component('app-footer', Footer);
+Vue.component('mobile-footer', FooterMobile);
 
 Vue.use(Vuetify)
 

@@ -1,5 +1,5 @@
 <template>
-  <v-footer height="auto" class="indigo darken-4 hidden-md-and-down" fixed>
+  <v-footer height="auto" class="indigo darken-4 hidden-lg-and-up">
     <v-layout row wrap justify-center>
       <v-btn
         color="white"
