@@ -71,7 +71,7 @@
         <v-subheader>Open in</v-subheader>
         <!-- Dialog -->
            <v-dialog v-model="dialog" fullscreen transition="dialog-bottom-transition" :overlay="false">
-              <v-btn color="primary" dark slot="activator">Open Dialog</v-btn>
+              <v-btn color="primary" dark slot="activator">Compare</v-btn>
               <v-card>
                 <v-toolbar dark color="primary">
                   <v-btn icon @click.native="dialog = false" dark>
