@@ -73,7 +73,7 @@
            <v-dialog v-model="dialog" fullscreen transition="dialog-bottom-transition" :overlay="false">
               <v-btn color="primary" dark slot="activator">Compare</v-btn>
               <v-card>
-                <v-toolbar dark color="primary">
+                <v-toolbar color="primary" dark>
                   <v-btn icon @click.native="dialog = false" dark>
                     <v-icon>close</v-icon>
                   </v-btn>
@@ -84,8 +84,11 @@
                   </v-toolbar-items>
                 </v-toolbar>
                 <!-- comapre table -->
-                <v-spacer></v-spacer>
                 <compare-table></compare-table>
+                <v-content>
+                  <v-spacer></v-spacer>
+                </v-content>
+                <app-footer></app-footer>
               </v-card>
             </v-dialog>
       </v-list>

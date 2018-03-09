@@ -6,8 +6,10 @@ import router from './router'
 import Vuetify from 'vuetify'
 import 'vuetify/dist/vuetify.min.css'
 import CompareTable from "@/components/CompareTable"
+import Footer from "@/components/Footer"
 
-Vue.component('compare-table', CompareTable )
+Vue.component('compare-table', CompareTable );
+Vue.component('app-footer', Footer);
 
 Vue.use(Vuetify)
 

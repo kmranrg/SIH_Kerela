@@ -1,5 +1,5 @@
 <template>
-  <v-container fluid grid-list-md>
+  <v-container grid-list-md style="margin-top: 75px;margin-bottom:75px" >
     <v-data-iterator
       content-tag="v-layout"
       row
@@ -7,7 +7,8 @@
       :items="items"
       :rows-per-page-items="rowsPerPageItems"
       :pagination.sync="pagination"
-      dark
+      
+      hide-actions
       
     >
       <v-flex
