@@ -85,7 +85,7 @@
                   </v-toolbar-items>
                 </v-toolbar>
                 <!-- comapre table -->
-                <compare-table></compare-table>
+                <compare-table ></compare-table>
                 <app-footer></app-footer>
                 <mobile-footer></mobile-footer>
               </v-card>
@@ -98,12 +98,10 @@
 </template>
 
 <script>
-import axios from 'axios';
 export default {
 
   data: () => ({
-    posts: [],
-    errors: [],
+
     // Dialog
 
     dialog: false,
@@ -144,23 +142,6 @@ export default {
 
     ]
   }),
-
-  created(){
-    let authToken = 'fd683b6cd8e7f02b9a8875ec889ce1bf03526591'
-    let headers = {
-      'Authorization': 'Token '+ authToken
-    }
-    axios.get('http://winmacinux.pythonanywhere.com/hospital/hospitals/1/', headers)
-    .then(response => {
-      // JSON responses are automatically parsed.
-      // console.log(response.data);
-      this.posts = response.data;
-    })
-    .catch(e => {
-      this.errors.push(e)
-    })
-  },
-
   props: {
     source: String
   }

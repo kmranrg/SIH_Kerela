@@ -9,13 +9,24 @@ import CompareTable from "@/components/CompareTable"
 import Footer from "@/components/Footer"
 import FooterMobile from "@/components/FooterMobile"
 import BottomNavigation from "@/components/BottomNavigation"
+import DropdownButton from "@/components/DropdownButton"
+import * as VueGoogleMaps from "vue2-google-maps"
+import GoogleMaps from "./components/GoogleMaps";
 
 Vue.component('compare-table', CompareTable );
 Vue.component('app-footer', Footer);
 Vue.component('mobile-footer', FooterMobile);
 Vue.component('bottom-navigation', BottomNavigation);
+Vue.component('drop-down', DropdownButton);
+Vue.component('google-maps', GoogleMaps);
 
 Vue.use(Vuetify)
+Vue.use(VueGoogleMaps, {
+  load: {
+    key: "AIzaSyCHk3PQ958NGsGA1sw6Ln__P1S4i_gjQnk",
+    libraries: "places" // necessary for places input
+  }
+});
 
 Vue.config.productionTip = false
 
