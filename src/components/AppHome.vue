@@ -7,6 +7,7 @@
       class="grey lighten-4"
       app
       v-model="drawer"
+      temporary
     >
       <v-list
         dense
@@ -91,7 +92,7 @@
             </v-dialog>
       </v-list>
       </v-bottom-sheet>
-      
+      <bottom-navigation></bottom-navigation>
     </v-content>
   </v-app>
 </template>
