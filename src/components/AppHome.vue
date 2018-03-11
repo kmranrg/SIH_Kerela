@@ -63,7 +63,6 @@
       ></v-text-field>
       <v-spacer></v-spacer>
     </v-toolbar>
-    
     <!-- bottom sheet -->
     <v-content>
       <v-bottom-sheet v-model="sheet">
@@ -84,6 +83,7 @@
                     <v-btn dark flat @click.native="dialog = false">Save</v-btn>
                   </v-toolbar-items>
                 </v-toolbar>
+              
                 <!-- comapre table -->
                 <compare-table ></compare-table>
                 <app-footer></app-footer>
@@ -92,11 +92,10 @@
             </v-dialog>
       </v-list>
       </v-bottom-sheet>
-      <bottom-navigation></bottom-navigation>
+      <card></card>
     </v-content>
   </v-app>
 </template>
-
 <script>
 export default {
 
