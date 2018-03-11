@@ -63,7 +63,6 @@
       ></v-text-field>
       <v-spacer></v-spacer>
     </v-toolbar>
-    
     <!-- bottom sheet -->
     <v-content>
       <v-bottom-sheet v-model="sheet">
@@ -94,7 +93,6 @@
       </v-list>
       </v-bottom-sheet>
       <card></card>
-      
     </v-content>
   </v-app>
 </template>

@@ -16,7 +16,7 @@
           md4
           lg8
         >
-          <v-card>
+          <v-card color="indigo lighten-5">
             <v-card-title><h4>{{ props.item.name }}</h4></v-card-title>
             <v-divider></v-divider>
             <v-list dense>
@@ -56,25 +56,30 @@ export default{
     items: [
       {
         value: false,
-        name: 'Samarth Nethralaya',
-        address: '15/16/Siddhivinayak Residency Above Dominos Pizza/Sector-20/Kharghar/NaviMumbai',
-        contact: 8652458337,
+        name: 'Bharti Eye Foundation',
+        address: '13/East Patel Nagar/Delhi/NCR',
+        contact: '011-25889900',
         website: 'http://www.bhartieye.com/',
         ratings: 4,
-        rent: 500,
-        calcium: '14%',
-        iron: '1%'
+        rent: 600,
       },
       {
         value: false,
         name: 'Samarth Nethralaya',
         address: '15/16/Siddhivinayak Residency Above Dominos Pizza/Sector-20/Kharghar/NaviMumbai',
         contact: 8652458337,
-        website: 'http://www.bhartieye.com/',
+        website: '-',
         ratings: 4,
         rent: 500,
-        calcium: '14%',
-        iron: '1%'
+      },
+      {
+        value: false,
+        name: "Dr Kapur's The Healing Touch",
+        address: 'D-8/Vikaspuri/Delhi/NCR',
+        contact: '011-28537777/011-28535083',
+        website: 'http://www.thehealingtoucheyecentre.com/',
+        ratings: 4,
+        rent: 2500,
       }
     ]
   })
