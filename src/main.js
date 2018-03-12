@@ -7,7 +7,6 @@ import Vuetify from 'vuetify'
 import 'vuetify/dist/vuetify.min.css'
 import CompareTable from "@/components/CompareTable"
 import Footer from "@/components/Footer"
-import FooterMobile from "@/components/FooterMobile"
 import BottomNavigation from "@/components/BottomNavigation"
 import DropdownButton from "@/components/DropdownButton"
 import * as VueGoogleMaps from "vue2-google-maps"
@@ -18,7 +17,6 @@ import BottomSheet from "./components/BottomSheet";
 
 Vue.component('compare-table', CompareTable );
 Vue.component('app-footer', Footer);
-Vue.component('mobile-footer', FooterMobile);
 Vue.component('bottom-navigation', BottomNavigation);
 Vue.component('drop-down', DropdownButton);
 Vue.component('google-maps', GoogleMaps);
