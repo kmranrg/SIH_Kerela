@@ -14,6 +14,12 @@
         <span>Nearby</span>
         <v-icon>place</v-icon>
       </v-btn>
+      <!-- Bottom Sheet -->
+      <v-btn flat color="teal" value="compare">
+        <span>Compare</span>
+        <v-icon>compare</v-icon>
+      </v-btn>
+      <!-- <sheet /> -->
     </v-bottom-nav>
   </v-card>
 </template>

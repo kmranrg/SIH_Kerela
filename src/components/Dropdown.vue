@@ -1,7 +1,7 @@
 <template>
   <div class="text-xs-center">
     <v-menu open-on-hover bottom offset-y>
-      <v-btn slot="activator">Settings</v-btn>
+      <v-btn round slot="activator">Settings</v-btn>
       <v-list>
         <v-list-tile v-for="item in items" :key="item.title">
           <v-list-tile-title>{{ item.title }}</v-list-tile-title>

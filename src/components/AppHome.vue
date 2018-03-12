@@ -52,7 +52,7 @@
       </v-list>
     </v-navigation-drawer>
     <!-- Toolbar -->
-    <v-toolbar app absolute clipped-left>
+    <v-toolbar >
       <v-toolbar-side-icon @click.native.stop="drawer = !drawer"></v-toolbar-side-icon>
       <span class="title ml-3 mr-5">HospSpot</span>
       <v-spacer></v-spacer>
@@ -60,7 +60,7 @@
     </v-toolbar>
     <!-- bottom sheet -->
     <v-content>
-      <v-card  color="black" dark class="upper" >
+      <v-card color="black" dark class="upper" >
         <bread class="mt-2" />
         <v-flex xs4>
           <v-text-field class="mt-3 mb-3"
@@ -71,34 +71,9 @@
           ></v-text-field>
         </v-flex>
       </v-card>
-      <v-bottom-sheet v-model="sheet">
-      <v-btn slot="activator" color="indigo darken-4" dark>Click me</v-btn>
-      <v-list>
-        <v-subheader>Open in</v-subheader>
-        <!-- Dialog -->
-           <v-dialog v-model="dialog" fullscreen transition="dialog-bottom-transition" :overlay="false">
-              <v-btn color="indigo darken-4" dark slot="activator">Compare</v-btn>
-              <v-card>
-                <v-toolbar color="indigo darken-4" dark>
-                  <v-btn icon @click.native="dialog = false" dark>
-                    <v-icon>close</v-icon>
-                  </v-btn>
-                  <v-toolbar-title>Settings</v-toolbar-title>
-                  <v-spacer></v-spacer>
-                  <v-toolbar-items>
-                    <v-btn dark flat @click.native="dialog = false">Save</v-btn>
-                  </v-toolbar-items>
-                </v-toolbar>
-              
-                <!-- comapre table -->
-                <compare-table ></compare-table>
-                <app-footer></app-footer>
-                <mobile-footer></mobile-footer>
-              </v-card>
-            </v-dialog>
-      </v-list>
-      </v-bottom-sheet>
-      <card></card>
+      <!-- Bottom Navigation -->
+      <bottom-navigation />
+
     </v-content>
   </v-app>
 </template>
@@ -107,12 +82,6 @@ export default {
 
   data: () => ({
 
-    // Dialog
-
-    dialog: false,
-    notifications: false,
-    sound: true,
-    widgets: false,
 
     // Bottom sheet
      sheet: false,
@@ -166,7 +135,6 @@ export default {
 
 .upper {
   display: flex;
-  justify-content: space-around
-
+  justify-content: space-around;
 }
 </style>

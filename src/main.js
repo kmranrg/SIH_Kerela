@@ -9,22 +9,22 @@ import CompareTable from "@/components/CompareTable"
 import Footer from "@/components/Footer"
 import FooterMobile from "@/components/FooterMobile"
 import BottomNavigation from "@/components/BottomNavigation"
-import Card from "@/components/Card"
 import DropdownButton from "@/components/DropdownButton"
 import * as VueGoogleMaps from "vue2-google-maps"
 import GoogleMaps from "./components/GoogleMaps";
 import Dropdown from "./components/Dropdown";
 import BreadCrumbs from "./components/BreadCrumbs";
+import BottomSheet from "./components/BottomSheet";
 
 Vue.component('compare-table', CompareTable );
 Vue.component('app-footer', Footer);
 Vue.component('mobile-footer', FooterMobile);
 Vue.component('bottom-navigation', BottomNavigation);
-Vue.component('card', Card);
 Vue.component('drop-down', DropdownButton);
 Vue.component('google-maps', GoogleMaps);
 Vue.component('dropbtn', Dropdown);
 Vue.component('bread', BreadCrumbs);
+Vue.component('sheet', BottomSheet);
 
 Vue.use(Vuetify)
 Vue.use(VueGoogleMaps, {
