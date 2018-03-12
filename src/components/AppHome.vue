@@ -8,7 +8,7 @@
       v-model="drawer"
       mini-variant
       temporary
-    >
+      >
       <v-list
         dense
         class="grey lighten-4"
@@ -51,6 +51,8 @@
         </template>
       </v-list>
     </v-navigation-drawer>
+
+
     <!-- Toolbar -->
     <v-toolbar >
       <v-toolbar-side-icon @click.native.stop="drawer = !drawer"></v-toolbar-side-icon>
@@ -58,8 +60,11 @@
       <v-spacer></v-spacer>
       <dropbtn />
     </v-toolbar>
+
+
     <!-- bottom sheet -->
     <v-content>
+      <!-- Upper Card -->
       <v-card color="black" dark class="upper" >
         <bread class="mt-2" />
         <v-flex xs4>
@@ -71,9 +76,37 @@
           ></v-text-field>
         </v-flex>
       </v-card>
+
+      <div>
+        <v-container grid-list-md text-xs-center>
+          <v-layout row wrap>
+            <v-flex xs12>
+              <v-card dark color="primary">
+                <v-card-text class="px-0">12</v-card-text>
+              </v-card>
+            </v-flex>
+            <v-flex xs7 >
+              <v-card dark color="secondary">
+                <v-card-text class="px-0">6</v-card-text>
+              </v-card>
+            </v-flex>
+            <v-flex xs5 >
+              <v-card dark color="secondary">
+                <google-maps/>
+              </v-card>
+            </v-flex>
+            <v-flex xs3 v-for="i in 4" :key="`3${i}`">
+              <v-card dark color="secondary">
+                <v-card-text class="px-0">3</v-card-text>
+              </v-card>
+            </v-flex>
+
+          </v-layout>
+        </v-container>
+      </div>
+
       <!-- Bottom Navigation -->
       <bottom-navigation />
-
     </v-content>
   </v-app>
 </template>
