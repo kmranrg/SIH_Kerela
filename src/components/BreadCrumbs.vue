@@ -9,16 +9,6 @@
         {{ item.text }}
       </v-breadcrumbs-item>
     </v-breadcrumbs>
-
-    <v-breadcrumbs divider="-">
-      <v-breadcrumbs-item
-        v-for="item in items"
-        :key="item.text"
-        :disabled="item.disabled"
-      >
-        {{ item.text }}
-      </v-breadcrumbs-item>
-    </v-breadcrumbs>
   </div>
 </template>
 

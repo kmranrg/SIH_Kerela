@@ -4,9 +4,9 @@
     <v-navigation-drawer
       fixed
       clipped
-      class="grey lighten-4"
       app
       v-model="drawer"
+      mini-variant
       temporary
     >
       <v-list
@@ -52,19 +52,25 @@
       </v-list>
     </v-navigation-drawer>
     <!-- Toolbar -->
-    <v-toolbar class="indigo darken-4" dark app absolute clipped-left>
+    <v-toolbar app absolute clipped-left>
       <v-toolbar-side-icon @click.native.stop="drawer = !drawer"></v-toolbar-side-icon>
       <span class="title ml-3 mr-5">HospSpot</span>
-      <v-text-field class="hidden-sm-and-down"
-        solo-inverted
-        flat
-        label="Search"
-        prepend-icon="search"
-      ></v-text-field>
       <v-spacer></v-spacer>
+      <dropbtn />
     </v-toolbar>
     <!-- bottom sheet -->
     <v-content>
+      <v-card  color="black" dark class="upper" >
+        <bread class="mt-2" />
+        <v-flex xs4>
+          <v-text-field class="mt-3 mb-3"
+            solo-inverted
+            flat
+            label="Look for Hospitals"
+            prepend-icon="search"
+          ></v-text-field>
+        </v-flex>
+      </v-card>
       <v-bottom-sheet v-model="sheet">
       <v-btn slot="activator" color="indigo darken-4" dark>Click me</v-btn>
       <v-list>
@@ -156,5 +162,11 @@ export default {
 }
 .text {
   font-weight: 400;
+}
+
+.upper {
+  display: flex;
+  justify-content: space-around
+
 }
 </style>
