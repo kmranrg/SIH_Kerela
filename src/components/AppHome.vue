@@ -126,13 +126,12 @@
               </v-card>
             </v-flex>
 
-            <!-- code to be edited -->
             <v-flex xs12 >
                 <v-data-iterator
                   content-tag="v-layout"
                   row
                   wrap
-                  :items="items"
+                  :items="posts[0]"
                   :rows-per-page-items="rowsPerPageItems"
                   :pagination.sync="pagination"
                   >
@@ -141,7 +140,7 @@
                     slot-scope="props"
                     xs3
                     
-                  >
+                    >
                     <v-card flat >
                     <v-card-media
                     src="https://vuetifyjs.com/static/doc-images/cards/sunshine.jpg"
@@ -157,10 +156,10 @@
                       </v-container>
                   </v-card-media>
                     <v-card-title class="py-0">
-                      <span class="body-2 mb-0">AIIMS Hospital</span><br>
+                      <span class="body-2 mb-0"> {{props.item.title}} </span><br>
                     </v-card-title>
                     <v-card-title class="py-0 pb-2">
-                      <div class="grey--text">Sector 1, Gr. Noida</div>
+                      <div class="grey--text"> {{props.item.address}} </div>
                     </v-card-title>
                     <v-card-actions class="pa-0">
                         <v-chip class="light-green accent-1" >
@@ -176,24 +175,23 @@
                 </v-data-iterator>
             </v-flex>
 
-            <!-- code to be edited -->
-
-
           </v-layout>
         </v-container>
       </div>
 
       <!-- Bottom Navigation -->
-      <bottom-navigation />
+      <!-- <bottom-navigation /> -->
       <app-footer />
     </v-content>
   </v-app>
 </template>
 <script>
+import axios from 'axios';
 export default {
 
   data: () => ({
-
+    posts: [],
+    errors: [],
     drawer: null,
     rowsPerPageItems: [4, 8, 12],
       pagination: {
@@ -215,8 +213,26 @@ export default {
       { icon: "phonelink", text: "App downloads" },
       { icon: "keyboard", text: "Keyboard shortcuts" },
 
-    ]
+    ],
+    
   }),
+    created() {
+      let authToken = 'fd683b6cd8e7f02b9a8875ec889ce1bf03526591'
+      let headers = {
+        'Authorization': 'Token '+ authToken
+      }
+      axios.get('http://winmacinux.pythonanywhere.com/hospital/hospitals/', headers)
+      .then(response => {
+        // JSON responses are automatically parsed.
+        console.log(response.data);
+        this.posts = [response.data];
+    })
+    .catch(e => {
+      this.errors.push(e)
+    })
+  },
+    
+
   props: {
     source: String
   }
