@@ -64,7 +64,7 @@
     <v-content>
       <!-- Upper Card -->
       <v-card color="black" dark class="upper" >
-        <bread class="mt-2" />
+        <bread class="mt-2 hidden-xs-only" />
         <v-flex xs4>
           <v-text-field class="mt-3 mb-3"
             solo-inverted
