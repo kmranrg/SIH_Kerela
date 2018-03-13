@@ -55,7 +55,7 @@
     <!-- Toolbar -->
     <v-toolbar app clipped-left class="" >
       <v-toolbar-side-icon @click.native.stop="drawer = !drawer"></v-toolbar-side-icon>
-      <span class="title ml-3 mr-5">HospSpot</span>
+      <span class="title ml-3 mr-5"><router-link to="/">Path Finder</router-link></span>
       <v-spacer></v-spacer>
       <dropbtn />
     </v-toolbar>

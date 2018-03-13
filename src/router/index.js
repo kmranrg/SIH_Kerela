@@ -1,8 +1,8 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import AppHome from '@/components/AppHome'
+import AppHome from '@/pages/AppHome'
 import HospitalProfile from '@/components/HospitalProfile'
-import Landing from '@/components/Landing'
+import Landing from '@/pages/Landing'
 
 Vue.use(Router)
 
