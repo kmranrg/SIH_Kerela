@@ -195,7 +195,7 @@ export default {
     drawer: null,
     rowsPerPageItems: [4, 8, 12],
       pagination: {
-        rowsPerPage: 4
+        rowsPerPage: 8
       },
     items: [
       { icon: "lightbulb_outline", text: "Notes" },
