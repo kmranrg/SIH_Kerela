@@ -6,8 +6,6 @@
       clipped
       app
       v-model="drawer"
-      mini-variant
-      temporary
       >
       <v-list
         dense
@@ -54,7 +52,7 @@
 
 
     <!-- Toolbar -->
-    <v-toolbar >
+    <v-toolbar app clipped-left >
       <v-toolbar-side-icon @click.native.stop="drawer = !drawer"></v-toolbar-side-icon>
       <span class="title ml-3 mr-5">HospSpot</span>
       <v-spacer></v-spacer>
@@ -75,6 +73,8 @@
         </v-flex>
       </v-card>
 
+      <!-- Grid -->
+
       <div>
         <v-container grid-list-md text-xs-center>
           <v-layout row wrap>
@@ -83,9 +83,40 @@
                 <v-card-text class="px-0">12</v-card-text>
               </v-card>
             </v-flex>
-            <v-flex xs7 >
-              <v-card dark color="secondary">
-                <v-card-text class="px-0">6</v-card-text>
+            <v-flex xs4 >
+              <v-card >
+                <v-card-media
+                src="https://vuetifyjs.com/static/doc-images/cards/sunshine.jpg"
+                height="257px"
+                >
+                <v-container fill-height fluid>
+                    <v-layout fill-height>
+                      <span><v-chip label class="success white--text" >Verified</v-chip></span>
+                      <v-flex xs12 align-end d-flex >
+                        <span class="bg-tranparent body-1 white--text">5.2 Kms</span>
+                      </v-flex>
+                    </v-layout>
+                  </v-container>
+              </v-card-media>
+                <v-card-title class="py-0">
+                  <span class="body-2 mb-0">AIIMS Hospital</span><br>
+                </v-card-title>
+                <v-card-title class="py-0 pb-2">
+                  <div class="grey--text">Sector 1, Gr. Noida</div>
+                </v-card-title>
+                <v-card-actions class="pa-0">
+                    <v-chip class="light-green accent-1" >
+                      <v-avatar class="light-green accent-4 white--text" >4.1</v-avatar>
+                      <span class="light-green--text accent-3">Very Good</span>
+                    </v-chip>
+                  <v-spacer></v-spacer>
+                    <span class="pr-2 grey--text" >4797 Ratings</span>
+                </v-card-actions>
+              </v-card>
+            </v-flex>
+            <v-flex xs3>
+              <v-card height="353px" dark color="secondary">
+                <v-card-text class="px-0">3</v-card-text>
               </v-card>
             </v-flex>
             <v-flex xs5 >
@@ -94,8 +125,34 @@
               </v-card>
             </v-flex>
             <v-flex xs3 v-for="i in 4" :key="`3${i}`">
-              <v-card dark color="secondary">
-                <v-card-text class="px-0">3</v-card-text>
+              <v-card >
+                <v-card-media
+                src="https://vuetifyjs.com/static/doc-images/cards/sunshine.jpg"
+                height="200px"
+                >
+                <v-container fill-height fluid>
+                    <v-layout fill-height>
+                      <span><v-chip label class="success white--text" >Verified</v-chip></span>
+                      <v-flex xs12 align-end d-flex >
+                        <span class="bg-tranparent body-1 white--text">5.2 Kms</span>
+                      </v-flex>
+                    </v-layout>
+                  </v-container>
+              </v-card-media>
+                <v-card-title class="py-0">
+                  <span class="body-2 mb-0">AIIMS Hospital</span><br>
+                </v-card-title>
+                <v-card-title class="py-0 pb-2">
+                  <div class="grey--text">Sector 1, Gr. Noida</div>
+                </v-card-title>
+                <v-card-actions class="pa-0">
+                    <v-chip class="light-green accent-1" >
+                      <v-avatar class="light-green accent-4 white--text" >4.1</v-avatar>
+                      <span class="light-green--text accent-3">Very Good</span>
+                    </v-chip>
+                  <v-spacer></v-spacer>
+                    <span class="pr-2 grey--text" >4797 Ratings</span>
+                </v-card-actions>
               </v-card>
             </v-flex>
 
@@ -140,7 +197,7 @@
       </div>
 
       <!-- Bottom Navigation -->
-      <!-- <bottom-navigation /> -->
+      <bottom-navigation />
       <app-footer />
     </v-content>
   </v-app>
