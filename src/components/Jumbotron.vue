@@ -1,15 +1,32 @@
 <template>
   <v-jumbotron color="grey lighten-2">
     <v-container fill-height>
-      <v-layout align-center>
-        <v-flex>
-          <h3 class="display-3">Welcome to the site</h3>
-          <span class="subheading">Lorem ipsum dolor sit amet, pri veniam forensibus id. Vis maluisset molestiae id, ad semper lobortis cum. At impetus detraxit incorrupte usu, repudiare assueverit ex eum, ne nam essent vocent admodum.</span>
+      <v-layout align-center row wrap>
+        <v-flex xs12>
+          <h3 class="display-3">Look for Hospitals</h3>
           <v-divider class="my-3"></v-divider>
-          <div class="title mb-3">Check out our newest features!</div>
-          <v-btn large color="primary" class="mx-0">See more</v-btn>
+          <div class="searchbar">
+          <v-card>  
+          <v-flex xs6>
+              <v-text-field class="mt-3 mb-3"
+                solo-inverted
+                flat
+                label="Search"
+                prepend-icon="search"
+              ></v-text-field>
+          </v-flex>
+          </v-card>
+        </div>
+          <v-btn round flarge color="primary" class="mx-0">Search</v-btn>
         </v-flex>
       </v-layout>
     </v-container>
   </v-jumbotron>
 </template>
+
+<style>
+.searchbar{
+  display: flex;
+  justify-content: center;
+}
+</style>
