@@ -131,7 +131,7 @@
                   content-tag="v-layout"
                   row
                   wrap
-                  :items="posts[0]"
+                  :items="posts"
                   :rows-per-page-items="rowsPerPageItems"
                   :pagination.sync="pagination"
                   >
@@ -225,7 +225,7 @@ export default {
       .then(response => {
         // JSON responses are automatically parsed.
         console.log(response.data);
-        this.posts = [response.data];
+        this.posts = response.data;
     })
     .catch(e => {
       this.errors.push(e)
