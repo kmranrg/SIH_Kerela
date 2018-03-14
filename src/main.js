@@ -14,6 +14,7 @@ import GoogleMaps from "./components/GoogleMaps";
 import Dropdown from "./components/Dropdown";
 import BreadCrumbs from "./components/BreadCrumbs";
 import BottomSheet from "./components/BottomSheet";
+import Jumbotron from "./components/Jumbotron";
 
 Vue.component('compare-table', CompareTable );
 Vue.component('app-footer', Footer);
@@ -23,6 +24,7 @@ Vue.component('google-maps', GoogleMaps);
 Vue.component('dropbtn', Dropdown);
 Vue.component('bread', BreadCrumbs);
 Vue.component('sheet', BottomSheet);
+Vue.component('jumbo', Jumbotron);
 
 Vue.use(Vuetify)
 Vue.use(VueGoogleMaps, {
