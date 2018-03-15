@@ -13,7 +13,7 @@
   </v-toolbar>
   <jumbo />
   
-  <v-container fluid class="white" >
+  <!-- <v-container fluid class="white" >
     <v-layout row wrap class="white pt-2">
       <v-flex xs3>
           <v-navigation-drawer permanent class="white" >
@@ -325,7 +325,8 @@
         <p class="display-1">Conneted Hospitals</p>
       </v-flex>
     </v-layout>
-  </v-container>
+  </v-container> -->
 
   </div>
+
   </template>
