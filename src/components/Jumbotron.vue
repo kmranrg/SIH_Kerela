@@ -6,18 +6,19 @@
           <h3 class="display-3">Look for Hospitals</h3>
           <v-divider class="my-3"></v-divider>
           <div class="searchbar">
-          <v-card>  
           <v-flex xs6>
-              <v-text-field class="mt-3 mb-3"
+              <v-select
                 solo-inverted
+                light
+                placeholder="Search Services, Hospitals, Blogs, Specialities, Treatments, Events"
                 flat
-                label="Search"
                 prepend-icon="search"
-              ></v-text-field>
+                autocomplete
+                class="ml-4"
+              ></v-select>
           </v-flex>
-          </v-card>
         </div>
-          <v-btn round flarge color="primary" class="mx-0">Search</v-btn>
+          <v-btn round flarge color="blue" class="mx-0">Search</v-btn>
         </v-flex>
       </v-layout>
     </v-container>

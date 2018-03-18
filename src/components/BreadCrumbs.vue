@@ -26,7 +26,7 @@
         },
         {
           text: 'Link 2',
-          disabled: true
+          disabled: false
         }
       ]
     })
