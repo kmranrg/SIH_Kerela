@@ -2,39 +2,38 @@
 <v-form v-model="valid">
   <v-stepper v-model="e1">
     <v-stepper-header>
-      <v-stepper-step step="" :complete="e1 > 1"><h2>Hi, tell me about yourself</h2></v-stepper-step>
+      <v-stepper-step step="" :complete="e1 > 1"><h2>Step 1</h2></v-stepper-step>
       <v-divider></v-divider>
-      <v-stepper-step step="" :complete="e1 > 2"><h2>Please give your feedback</h2></v-stepper-step>
+      <v-stepper-step step="" :complete="e1 > 2"><h2>Step 2</h2></v-stepper-step>
       <v-divider></v-divider>
-      <v-stepper-step step=""><h2>Give Ratings</h2></v-stepper-step>
+      <v-stepper-step step=""><h2>Step 3</h2></v-stepper-step>
     </v-stepper-header>
     <v-stepper-items>
       <v-stepper-content step="1">
-       <v-card color="grey lighten-5" class="mb-5" height="380px">
+       <v-card flat color="grey lighten-5" class="mb-5" height="460px" 
+       img="https://www.medimobile.com/wp-content/uploads/hospital-hall-background-light.jpg">
+       <v-card-text>
+            <div class="display-3 feedback">Hi, tell us about yourself !</div>
+          </v-card-text>
      <v-container fluid>
     <v-layout row>
-      <v-flex xs4>
-        <v-subheader><h3>Full Name</h3></v-subheader>
-      </v-flex>
-      <v-flex xs8>
+      <v-flex xs10>
         <v-text-field
+          class="mx-5 mr-5 mt-4"
           v-model="name"
           name="input-1"
-          label="eg. abc xyz"
+          label="Full Name"
           id="testing"
           :rules="nameRules"
-          required
         ></v-text-field>
       </v-flex>
     </v-layout>
     <v-layout row>
-      <v-flex xs4>
-        <v-subheader><h3>Email Address</h3></v-subheader>
-      </v-flex>
-      <v-flex xs8>
+      <v-flex xs10>
         <v-text-field
+          class="mx-5 mr-5"
           name="input-1"
-          label="eg. abc@xyz.com"
+          label="Email Address"
           id="testing"
           v-model="email"
       :rules="emailRules"
@@ -43,28 +42,13 @@
       </v-flex>
     </v-layout>
     <v-layout row>
-      <v-flex xs4>
-        <v-subheader><h3>Contact No.</h3></v-subheader>
-      </v-flex>
-      <v-flex xs8>
+      <v-flex xs10>
         <v-text-field
+          class="ml-5 mr-5"
           name="input-1"
-          label="eg. 1234567890"
+          label="Contact No."
           id="testing"
           :counter="10"
-        ></v-text-field>
-      </v-flex>
-    </v-layout>
-    <v-layout row>
-      <v-flex xs4>
-        <v-subheader><h3>User ID</h3></v-subheader>
-      </v-flex>
-      <v-flex xs8>
-        <v-text-field
-          name="input-3"
-          label=""
-          value="USR001"
-          disabled
         ></v-text-field>
       </v-flex>
     </v-layout>
@@ -74,23 +58,29 @@
         <v-btn round flat>Cancel</v-btn>
       </v-stepper-content>
       <v-stepper-content step="2">
-        <v-card color="grey lighten-5" class="mb-5" height="380px">
-          <v-form v-model="valid">
-    <v-text-field
-      label="write here..."
-      v-model="name"
-      :rules="nameRules"
-      :counter="100"
-      required
-    ></v-text-field>
-          </v-form>
+        <v-card tile flat height="510px" class="black text-xs-center" img="https://www.medimobile.com/wp-content/uploads/hospital-hall-background-light.jpg" >
+          <v-card-text>
+            <div class="display-3 feedback">Give the Feedback</div>
+          </v-card-text>
+          <v-card-text class="pa-5 my-5">
+            <v-text-field 
+            label="eg. Hi, I am abc..."
+            :counter="20"></v-text-field>
+          </v-card-text>
         </v-card>
         <v-btn round color="grey lighten-1" @click.native="e1 = 3">Continue</v-btn>
         <v-btn round flat>Cancel</v-btn>
       </v-stepper-content>
       <v-stepper-content step="3">
-        <v-card color="grey lighten-5" class="mb-5" height="380px">
-          <v-card flat>
+        <v-card flat
+        color="grey lighten-5" 
+        class="mb-5" 
+        height="460px" 
+        img="https://www.medimobile.com/wp-content/uploads/hospital-hall-background-light.jpg">
+        <v-card-text>
+            <div class="display-3 feedback">Give Ratings</div>
+          </v-card-text>
+        <v-card flat>
     <v-card-text>
       <v-container fluid>
         <v-layout row wrap>
