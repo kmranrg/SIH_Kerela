@@ -1,8 +1,8 @@
 <template>
-  <div>
+  <div class="wrapper">
     <!-- Toolbar -->
     <v-toolbar color="red darken-1" dark flat fixed >
-      <v-toolbar-title ><v-icon left large color="blue" >add</v-icon>Hos Spot</v-toolbar-title>
+      <v-toolbar-title ><v-icon left large color="blue" ></v-icon>Hopitaux</v-toolbar-title>
       
       <v-spacer></v-spacer>
       <v-toolbar-items class="hidden-sm-and-down">
@@ -10,12 +10,13 @@
           <v-btn flat>Services</v-btn>
           <v-btn flat>Log In</v-btn>
           <v-btn class="black" >
-            <v-icon left>face</v-icon>Sign Up</v-btn>
+            <v-icon left>face</v-icon>Sign Up
+          </v-btn>
       </v-toolbar-items>
     </v-toolbar>
     <jumbo/>
 
-    <v-container fluid class="white">
+    <v-container grid-list-md text-xs-center>
       <v-layout row wrap class="white pt-2">
         <v-flex xs3>
 
@@ -81,7 +82,7 @@
         <v-flex xs9>
           <v-layout row wrap>
             <template>
-              <v-flex md3 sm3 xs4>
+              <v-flex xs3>
                 <v-list two-line subheader>
                   <v-list-tile>
                     <v-list-tile-content>
@@ -123,12 +124,6 @@
                     </v-list-tile-content>
                   </v-list-tile>
 
-                  <v-list-tile>
-                    <v-list-tile-content>
-                      <v-list-tile-title>Gasteroenterology</v-list-tile-title>
-                      <v-list-tile-sub-title>250 Hosiptals</v-list-tile-sub-title>
-                    </v-list-tile-content>
-                  </v-list-tile>
                 </v-list>
               </v-flex>
             </template>
@@ -175,12 +170,6 @@
                     </v-list-tile-content>
                   </v-list-tile>
 
-                  <v-list-tile>
-                    <v-list-tile-content>
-                      <v-list-tile-title>Gasteroenterology</v-list-tile-title>
-                      <v-list-tile-sub-title>250 Hosiptals</v-list-tile-sub-title>
-                    </v-list-tile-content>
-                  </v-list-tile>
                 </v-list>
               </v-flex>
             </template>
@@ -227,12 +216,6 @@
                     </v-list-tile-content>
                   </v-list-tile>
 
-                  <v-list-tile>
-                    <v-list-tile-content>
-                      <v-list-tile-title>Gasteroenterology</v-list-tile-title>
-                      <v-list-tile-sub-title>250 Hosiptals</v-list-tile-sub-title>
-                    </v-list-tile-content>
-                  </v-list-tile>
                 </v-list>
               </v-flex>
             </template>
@@ -279,18 +262,14 @@
                     </v-list-tile-content>
                   </v-list-tile>
 
-                  <v-list-tile>
-                    <v-list-tile-content>
-                      <v-list-tile-title>Gasteroenterology</v-list-tile-title>
-                      <v-list-tile-sub-title>250 Hosiptals</v-list-tile-sub-title>
-                    </v-list-tile-content>
-                  </v-list-tile>
                 </v-list>
               </v-flex>
             </template>
           </v-layout>
         </v-flex>
       </v-layout>
+    </v-container>
+    <v-container fluid>
       <v-layout row wrap justify-center class="grey lighten-4 pt-4">
         <p class="display-1 text-xs-center">Near By Hospitals</p>
         <v-carousel
@@ -340,35 +319,39 @@
           </v-carousel-item>
         </v-carousel>
       </v-layout>
-      <v-layout row wrap justify-center align-center>
-        <v-flex x12 class="py-4">
-          <p class="display-1 text-xs-center">Top 10 High Rated Hospitals</p>
-        </v-flex>
-        <v-flex xs12>
-          <v-layout row wrap>
-            <v-flex xs3 class="pa-2" v-for="i in 10" :key="i">
-              <v-card
-                dark
-
-                img="https://static-collegedunia.com/public/college_data/images/appImage/10558_IHBAS_New.jpg"
-              >
-                <v-card-title class="subheading bg-trans">
-                  IHBAS Hospital
-                </v-card-title>
-                <v-card-actions class="pa-0 bg-trans">
-                  <v-chip class="light-green accent-1">
-                    <v-avatar class="light-green accent-4 white--text">4.5</v-avatar>
-                    <span class="light-green--text accent-3">Very Good</span>
-                  </v-chip>
-                  <v-spacer></v-spacer>
-                  <span class="pr-2">4797 Ratings</span>
-                </v-card-actions>
-              </v-card>
+      <v-jumbotron color="grey lighten-2">
+        <v-container fill-height>
+          <v-layout row wrap justify-center align-center>
+            <v-flex x12 class="pt-4">
+              <p class="display-1 text-xs-center">Top Rated Hospitals</p>
             </v-flex>
+            <v-flex xs12>
+              <v-layout row wrap>
+                <v-flex xs3 class="pa-2" v-for="i in 8" :key="i">
+                  <v-card
+                    dark
 
+                    img="https://static-collegedunia.com/public/college_data/images/appImage/10558_IHBAS_New.jpg"
+                  >
+                    <v-card-title class="subheading bg-trans">
+                      IHBAS Hospital
+                    </v-card-title>
+                    <v-card-actions class="pa-0 bg-trans">
+                      <v-chip class="light-green accent-1">
+                        <v-avatar class="light-green accent-4 white--text">4.5</v-avatar>
+                        <span class="light-green--text accent-3">Very Good</span>
+                      </v-chip>
+                      <v-spacer></v-spacer>
+                      <span class="pr-2">4797 Ratings</span>
+                    </v-card-actions>
+                  </v-card>
+                </v-flex>
+
+              </v-layout>
+            </v-flex>
           </v-layout>
-        </v-flex>
-      </v-layout>
+        </v-container>
+      </v-jumbotron>
       <v-layout row wrap class=" py-4 px-2 text-sm-center">
         <v-flex xs12 class="my-4">
           <h1 class="display-1 my-4">Our Specialities</h1>
@@ -469,7 +452,7 @@
           </v-flex>
         </v-flex>
       </v-layout>
-      <v-layout row wrap justify-center align-center class="py-4 info white--text">
+      <v-layout row wrap justify-center align-center class="py-4 info">
         <v-flex md4 class="text-xs-center border-left">
           <p class="display-3">40,000 +</p>
           <p class="display-1">Total Achievements</p>
@@ -484,6 +467,76 @@
         </v-flex>
       </v-layout>
     </v-container>
+    <v-footer height="auto">
+      <v-card flat tile style="width: 100%;">
+          <v-card-text class="black white--text" >
+            <v-layout row wrap>
+              <v-flex xs3>
+                <p class="title" >Patient Services</p>
+                <p>About Us</p>
+                <p>For Indian Patients</p>
+                <p>For International Patients</p>
+                <p>Patient Testinomials</p>
+                <p>Emergency 24x7</p>
+                <p>Site Map</p>
+              </v-flex>
+              <v-flex xs3>
+                <p class="title" >Patient Services</p>
+                <p>About Us</p>
+                <p>For Indian Patients</p>
+                <p>For International Patients</p>
+                <p>Patient Testinomials</p>
+                <p>Emergency 24x7</p>
+                <p>Site Map</p>
+              </v-flex>
+              <v-flex xs3>
+                <p class="title" >Patient Services</p>
+                <p>About Us</p>
+                <p>For Indian Patients</p>
+                <p>For International Patients</p>
+                <p>Patient Testinomials</p>
+                <p>Emergency 24x7</p>
+                <p>Site Map</p>
+              </v-flex>
+            </v-layout>
+          </v-card-text>
+          <v-card-title class="black white--text">
+            <strong class="subheading">Get connected with us on social networks!</strong>
+            <v-spacer></v-spacer>
+            <v-btn
+              icon
+              dark
+              class="mx-3"
+            >
+              <v-icon size="24px">fa-facebook</v-icon>
+            </v-btn>
+            <v-btn
+              icon
+              dark
+              class="mx-3"
+            >
+              <v-icon size="24px">fa-twitter</v-icon>
+            </v-btn>
+            <v-btn
+              icon
+              dark
+              class="mx-3"
+            >
+              <v-icon size="24px">fa-google-plus</v-icon>
+            </v-btn>
+            <v-btn
+              icon
+              dark
+              class="mx-3"
+            >
+              <v-icon size="24px">fa-instagram</v-icon>
+            </v-btn>
+          </v-card-title>
+          <v-card-actions class="black white--text justify-center">
+            &copy;2018 — <strong>Hos Spot</strong>
+          </v-card-actions>
+        </v-card>
+    </v-footer>
 
   </div>
 </template>
@@ -509,4 +562,5 @@
       .bg-trans{
         background-color: rgba(0, 0, 0, 0.3)
       }
+
     </style>

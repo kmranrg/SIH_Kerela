@@ -15,7 +15,7 @@ import Dropdown from "./components/Dropdown";
 import BreadCrumbs from "./components/BreadCrumbs";
 import BottomSheet from "./components/BottomSheet";
 import Jumbotron from "./components/Jumbotron";
-import colors from 'vuetify/es5/util/colors'
+import InstantSearch from 'vue-instantsearch';
 
 Vue.component('compare-table', CompareTable );
 Vue.component('app-footer', Footer);
@@ -27,11 +27,16 @@ Vue.component('bread', BreadCrumbs);
 Vue.component('sheet', BottomSheet);
 Vue.component('jumbo', Jumbotron);
 
+Vue.use(InstantSearch);
 Vue.use(Vuetify, {
   theme: {
-    primary: colors.red.darken1, // #E53935
-    secondary: colors.red.lighten4, // #FFCDD2
-    accent: colors.indigo.base // #3F51B5
+    primary: '#1976D2',
+    secondary: '#424242',
+    accent: '#82B1FF',
+    error: '#FF5252',
+    info: '#2196F3',
+    success: '#4CAF50',
+    warning: '#FFC107'
   }
 })
 Vue.use(VueGoogleMaps, {
