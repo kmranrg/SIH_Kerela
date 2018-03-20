@@ -77,38 +77,92 @@
             <v-container grid-list-md text-xs-center>
               <v-layout row wrap>
                 <v-flex xs12>
-                  <v-card dark color="secondary">
+                  <v-card dark>
                     <v-card-text class="px-0">Book a visit</v-card-text>
-                  </v-card>
-                </v-flex>
-                <v-flex xs4 v-for="i in 3" :key="`4${i}`">
-                  <v-card dark color="primary">
-                    <v-card-text class="px-0">4</v-card-text>
-                  </v-card>
-                </v-flex>
-                <v-flex xs3 v-for="i in 4" :key="`3${i}`">
-                  <v-card dark color="secondary">
-                    <v-card-text class="px-0">3</v-card-text>
-                  </v-card>
-                </v-flex>
-                <v-flex xs2 v-for="i in 6" :key="`2${i}`">
-                  <v-card dark color="primary">
-                    <v-card-text class="px-0">2</v-card-text>
-                  </v-card>
-                </v-flex>
-                <v-flex xs1 v-for="i in 12" :key="`1${i}`">
-                  <v-card dark color="secondary">
-                    <v-card-text class="px-0">1</v-card-text>
+                     <v-card-media src="https://vuetifyjs.com/static/doc-images/lists/ali.png" height="300px">
+                      <v-layout column class="media">
+                        <v-card-title>
+                          <v-btn dark icon>
+                            <v-icon>chevron_left</v-icon>
+                          </v-btn>
+                          <v-spacer></v-spacer>
+                          <v-btn dark icon class="mr-3">
+                            <v-icon>edit</v-icon>
+                          </v-btn>
+                          <v-btn dark icon>
+                            <v-icon>more_vert</v-icon>
+                          </v-btn>
+                        </v-card-title>
+                        <v-spacer></v-spacer>
+                        <v-card-title class="white--text pl-5 pt-5">
+                          <div class="display-1 pl-5 pt-5">Ali Conners</div>
+                        </v-card-title>
+                      </v-layout>
+                    </v-card-media>
+                    <v-list two-line>
+                      <v-list-tile >
+                        <v-list-tile-action>
+                          <v-icon color="indigo">phone</v-icon>
+                        </v-list-tile-action>
+                        <v-list-tile-content>
+                          <v-list-tile-title>(650) 555-1234</v-list-tile-title>
+                          <v-list-tile-sub-title>Mobile</v-list-tile-sub-title>
+                        </v-list-tile-content>
+                        <v-list-tile-action>
+                          <v-icon>chat</v-icon>
+                        </v-list-tile-action>
+                      </v-list-tile>
+                      <v-list-tile >
+                        <v-list-tile-action></v-list-tile-action>
+                        <v-list-tile-content>
+                          <v-list-tile-title>(323) 555-6789</v-list-tile-title>
+                          <v-list-tile-sub-title>Work</v-list-tile-sub-title>
+                        </v-list-tile-content>
+                        <v-list-tile-action>
+                          <v-icon>chat</v-icon>
+                        </v-list-tile-action>
+                      </v-list-tile>
+                      <v-divider inset></v-divider>
+                      <v-list-tile >
+                        <v-list-tile-action>
+                          <v-icon color="indigo">mail</v-icon>
+                        </v-list-tile-action>
+                        <v-list-tile-content>
+                          <v-list-tile-title>aliconnors@example.com</v-list-tile-title>
+                          <v-list-tile-sub-title>Personal</v-list-tile-sub-title>
+                        </v-list-tile-content>
+                      </v-list-tile>
+                      <v-list-tile >
+                        <v-list-tile-action></v-list-tile-action>
+                        <v-list-tile-content>
+                          <v-list-tile-title>ali_connors@example.com</v-list-tile-title>
+                          <v-list-tile-sub-title>Work</v-list-tile-sub-title>
+                        </v-list-tile-content>
+                      </v-list-tile>
+                      <v-divider inset></v-divider>
+                      <v-list-tile >
+                        <v-list-tile-action>
+                          <v-icon color="indigo">location_on</v-icon>
+                        </v-list-tile-action>
+                        <v-list-tile-content>
+                          <v-list-tile-title>1400 Main Street</v-list-tile-title>
+                          <v-list-tile-sub-title>Orlando, FL 79938</v-list-tile-sub-title>
+                        </v-list-tile-content>
+                      </v-list-tile>
+                    </v-list>
                   </v-card>
                 </v-flex>
               </v-layout>
             </v-container>
           </v-flex>
+          
+
         </v-layout>
       </v-container>
 
       
     </v-content>
+    <app-footer/>
   </v-app>
 </template>
 
