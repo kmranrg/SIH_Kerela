@@ -19,7 +19,8 @@
     <v-layout row>
       <v-flex xs10>
         <v-text-field
-          class="mx-5 mr-5 mt-4"
+          prepend-icon="perm_identity"
+          class="mx-5 mr-5 mt-4 input-group--focused"
           v-model="name"
           name="input-1"
           label="Full Name"
@@ -31,20 +32,21 @@
     <v-layout row>
       <v-flex xs10>
         <v-text-field
-          class="mx-5 mr-5"
+          prepend-icon="email"
+          class="mx-5 mr-5 input-group--focused"
           name="input-1"
           label="Email Address"
           id="testing"
           v-model="email"
       :rules="emailRules"
-      required
         ></v-text-field>
       </v-flex>
     </v-layout>
     <v-layout row>
       <v-flex xs10>
         <v-text-field
-          class="ml-5 mr-5"
+          prepend-icon="phone"
+          class="ml-5 mr-5 input-group--focused"
           name="input-1"
           label="Contact No."
           id="testing"
@@ -64,6 +66,7 @@
           </v-card-text>
           <v-card-text class="pa-5 my-5">
             <v-text-field 
+            prepend-icon="note"
             label="eg. Hi, I am abc..."
             :counter="20"></v-text-field>
           </v-card-text>
@@ -75,61 +78,13 @@
         <v-card flat
         color="grey lighten-5" 
         class="mb-5" 
-        height="460px" 
-        img="https://www.medimobile.com/wp-content/uploads/hospital-hall-background-light.jpg">
+        height="460px"
+        img="https://www.medimobile.com/wp-content/uploads/hospital-hall-background-light.jpg" >
         <v-card-text>
             <div class="display-3 feedback">Give Ratings</div>
-          </v-card-text>
-        <v-card flat>
-    <v-card-text>
-      <v-container fluid>
-        <v-layout row wrap>
-          <v-flex xs12 sm4 md4>
-            <v-checkbox
-              label="1"
-              append-icon="star"
-              v-model="ex4"
-              color="black"
-              value="red"
-              hide-details
-            ></v-checkbox>
-            <v-checkbox
-              label="2"
-              append-icon="star"
-              v-model="ex4"
-              color="black"
-              value="red darken-3"
-              hide-details
-            ></v-checkbox>
-            <v-checkbox
-              label="3"
-              append-icon="star"
-              v-model="ex4"
-              color="black"
-              value="red darken-3"
-              hide-details
-            ></v-checkbox>
-            <v-checkbox
-              label="4"
-              append-icon="star"
-              v-model="ex4"
-              color="black"
-              value="red darken-3"
-              hide-details
-            ></v-checkbox>
-            <v-checkbox
-              label="5"
-              append-icon="star"
-              v-model="ex4"
-              color="black"
-              value="red darken-3"
-              hide-details
-            ></v-checkbox>
-          </v-flex>
-        </v-layout>      
-</v-container>
-
-    </v-card-text></v-card>
+                <v-flex mt-5 ml-5 pl-5><v-flex ml-5 pl-5><v-flex ml-5 pl-5><v-flex ml-5 pl-5><v-flex ml-5 pl-5>
+                <star-rating></star-rating></v-flex></v-flex></v-flex></v-flex></v-flex>
+        </v-card-text>
         </v-card>
         <v-btn round color="grey lighten-1" @click.native="e1 = 1">Submit</v-btn>
         <v-btn round flat>Cancel</v-btn>
@@ -143,15 +98,17 @@
   export default {
     data () {
       return {
+        value6: 50,
         e1: 0,
         valid: false,
-      name: '',
+        email:'',
+        name: '',
       nameRules: [
         v => !!v || 'This is required',
         v => v.length <= 10 || 'Name must be less than 10 characters'
       ],
       emailRules: [
-        v => !!v || 'E-mail is required',
+        v => !!v || 'This is required',
         v => /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/.test(v) || 'E-mail must be valid'
       ],
       ex4: ['red']
