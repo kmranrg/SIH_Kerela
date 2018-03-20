@@ -15,7 +15,9 @@ import Dropdown from "./components/Dropdown";
 import BreadCrumbs from "./components/BreadCrumbs";
 import BottomSheet from "./components/BottomSheet";
 import Jumbotron from "./components/Jumbotron";
+import Raters from 'vue-rate-it';
 import InstantSearch from 'vue-instantsearch';
+
 
 Vue.component('compare-table', CompareTable );
 Vue.component('app-footer', Footer);
@@ -26,6 +28,7 @@ Vue.component('dropbtn', Dropdown);
 Vue.component('bread', BreadCrumbs);
 Vue.component('sheet', BottomSheet);
 Vue.component('jumbo', Jumbotron);
+Vue.component('star-rating', Raters.StarRating);
 
 Vue.use(InstantSearch);
 Vue.use(Vuetify, {

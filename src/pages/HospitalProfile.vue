@@ -173,7 +173,6 @@ export default {
 }
 </script>
 
-
 <style>
 .avatar {
   display: flex;

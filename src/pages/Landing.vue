@@ -1,6 +1,7 @@
 <template>
   <div class="wrapper">
     <!-- Toolbar -->
+    
     <v-toolbar color="red darken-1" dark flat fixed >
       <v-toolbar-title ><v-icon left large color="blue" ></v-icon>Hopitaux</v-toolbar-title>
       
@@ -564,3 +565,4 @@
       }
 
     </style>
+
