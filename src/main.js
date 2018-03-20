@@ -16,6 +16,8 @@ import BreadCrumbs from "./components/BreadCrumbs";
 import BottomSheet from "./components/BottomSheet";
 import Jumbotron from "./components/Jumbotron";
 import Raters from 'vue-rate-it';
+import InstantSearch from 'vue-instantsearch';
+
 
 Vue.component('compare-table', CompareTable );
 Vue.component('app-footer', Footer);
@@ -28,7 +30,18 @@ Vue.component('sheet', BottomSheet);
 Vue.component('jumbo', Jumbotron);
 Vue.component('star-rating', Raters.StarRating);
 
-Vue.use(Vuetify)
+Vue.use(InstantSearch);
+Vue.use(Vuetify, {
+  theme: {
+    primary: '#1976D2',
+    secondary: '#424242',
+    accent: '#82B1FF',
+    error: '#FF5252',
+    info: '#2196F3',
+    success: '#4CAF50',
+    warning: '#FFC107'
+  }
+})
 Vue.use(VueGoogleMaps, {
   load: {
     key: "AIzaSyCHk3PQ958NGsGA1sw6Ln__P1S4i_gjQnk",
