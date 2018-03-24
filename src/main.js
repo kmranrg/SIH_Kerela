@@ -17,6 +17,7 @@ import BottomSheet from "./components/BottomSheet";
 import Jumbotron from "./components/Jumbotron";
 import Raters from 'vue-rate-it';
 import InstantSearch from 'vue-instantsearch';
+import ReviewCard from "./components/ReviewCard.vue";
 
 
 Vue.component('compare-table', CompareTable );
@@ -29,6 +30,7 @@ Vue.component('bread', BreadCrumbs);
 Vue.component('sheet', BottomSheet);
 Vue.component('jumbo', Jumbotron);
 Vue.component('star-rating', Raters.StarRating);
+Vue.component('review', ReviewCard);
 
 Vue.use(InstantSearch);
 Vue.use(Vuetify, {

@@ -5,6 +5,7 @@
         v-for="item in items"
         :key="item.text"
         :disabled="item.disabled"
+        :to="item.link"
       >
         {{ item.text }}
       </v-breadcrumbs-item>
@@ -18,15 +19,18 @@
       items: [
         {
           text: 'Dashboard',
-          disabled: false
+          disabled: false,
+          link: '/'
         },
         {
-          text: 'Link 1',
-          disabled: false
+          text: 'hospitals',
+          disabled: false,
+          link: '/hospitals'
         },
         {
-          text: 'Link 2',
-          disabled: false
+          text: 'profile',
+          disabled: false,
+          link: '/hospital-profile'
         }
       ]
     })

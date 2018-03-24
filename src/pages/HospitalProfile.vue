@@ -2,7 +2,7 @@
   <v-app>
 
     <!-- Toolbar -->
-    <v-toolbar app clipped-left class="">
+    <v-toolbar app clipped-left>
       <v-toolbar-side-icon @click.native.stop="drawer = !drawer"></v-toolbar-side-icon>
       <span class="title ml-3 mr-5"><router-link to="/">Path Finder</router-link></span>
       <v-spacer></v-spacer>
@@ -50,25 +50,14 @@
                     </div>
                   </v-card>
                 </v-flex>
-                <v-flex xs4 v-for="i in 3" :key="`4${i}`">
-                  <v-card dark color="primary">
-                    <v-card-text class="px-0">4</v-card-text>
-                  </v-card>
+                <v-flex xs12>
+                  <review />
                 </v-flex>
-                <v-flex xs3 v-for="i in 4" :key="`3${i}`">
-                  <v-card dark color="secondary">
-                    <v-card-text class="px-0">3</v-card-text>
-                  </v-card>
+                <v-flex xs12>
+                  <review />
                 </v-flex>
-                <v-flex xs2 v-for="i in 6" :key="`2${i}`">
-                  <v-card dark color="primary">
-                    <v-card-text class="px-0">2</v-card-text>
-                  </v-card>
-                </v-flex>
-                <v-flex xs1 v-for="i in 12" :key="`1${i}`">
-                  <v-card dark color="secondary">
-                    <v-card-text class="px-0">1</v-card-text>
-                  </v-card>
+                <v-flex xs12>
+                  <review />
                 </v-flex>
               </v-layout>
             </v-container>

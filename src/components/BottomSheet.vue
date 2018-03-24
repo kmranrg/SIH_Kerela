@@ -1,12 +1,12 @@
 <template>
   <div class="text-xs-center">
     <v-bottom-sheet v-model="sheet">
-      <v-btn slot="activator">Compare</v-btn>
+      <v-btn slot="activator">Compe</v-btn>
       <v-list>
         <v-subheader>Open in</v-subheader>
         <v-list-tile
-          v-for="tile in tiles"
-          :key="tile.title"
+          v-for="tile in data"
+          :key="tile"
           @click="sheet = false"
         >
           <v-list-tile-avatar>
@@ -14,7 +14,7 @@
               <img :src="`https://vuetifyjs.com/static/doc-images/bottom-sheets/${tile.img}`" :alt="tile.title">
             </v-avatar>
           </v-list-tile-avatar>
-          <v-list-tile-title>{{ tile.title }}</v-list-tile-title>
+          <v-list-tile-title>{{ tile }}</v-list-tile-title>
         </v-list-tile>
       </v-list>
     </v-bottom-sheet>
@@ -23,6 +23,7 @@
 
 <script>
   export default {
+    props:['data'],
     data: () => ({
       sheet: false,
       tiles: [

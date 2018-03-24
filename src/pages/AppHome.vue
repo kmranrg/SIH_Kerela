@@ -180,8 +180,9 @@
       </div>
 
       <!-- Bottom Navigation -->
-      <!-- <bottom-navigation /> -->
-      <app-footer/>
+      <bottom-navigation />
+      <sheet :data="[1,2,3,4]"/>
+      <!-- <app-footer/> -->
     </v-content>
   </v-app>
 </template>
