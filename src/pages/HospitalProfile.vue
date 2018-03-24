@@ -51,10 +51,10 @@
                   </v-card>
                 </v-flex>
                 <v-flex xs12>
-                  <review />
+                  <!-- <review /> -->
                 </v-flex>
                 <v-flex xs12>
-                  <review />
+                  <!-- <review /> -->
                 </v-flex>
                 <v-flex xs12>
                   <review />

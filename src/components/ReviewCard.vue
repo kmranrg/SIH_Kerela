@@ -4,15 +4,26 @@
       <v-card>
         
             <v-layout row wrap>
-                <v-flex xs3 my-4 ml-3>
-                    <v-card flat dark color="primary">
-                    <v-card-text class="px-0">12</v-card-text>
+                <v-flex xs3 my-4 mx-4>
+                    <v-card  flat dark color="indigo darken-4">
+                    <div id="review_summary"><strong style="font-size: 3rem;line-height: 1;">4.7</strong>
+                    <div>stars</div>
+                    <div><small>Based on 5 reviews</small></div>
+                    </div>
                     </v-card>
                 </v-flex>
-                <v-flex xs6 my-4 >
-                    <v-card dark color="primary">
-                    <v-card-text class="px-0">12</v-card-text>
-                    </v-card>
+                <v-flex xs6 my-3 >
+                            <div>
+                                <v-progress-linear value="15" height="15" color="teal accent-4" background-color="grey lighten-2"></v-progress-linear>
+
+                                <v-progress-linear value="30" height="15" color="teal accent-4" background-color="grey lighten-2"></v-progress-linear>
+
+                                <v-progress-linear value="45" height="15" color="teal accent-4" background-color="grey lighten-2"></v-progress-linear>
+
+                                <v-progress-linear value="60" height="15" color="teal accent-4" background-color="grey lighten-2"></v-progress-linear>
+
+                                <v-progress-linear value="75" height="15" color="teal accent-4" background-color="grey lighten-2"></v-progress-linear>
+                            </div>
                 </v-flex>
                 <v-flex xs2 my-4 >
                     <v-card flat dark color="primary">
@@ -63,8 +74,20 @@
           { avatar: 'https://vuetifyjs.com/static/doc-images/lists/4.jpg', title: 'Birthday gift', subtitle: "<span class='text--primary'>Trevor Hansen</span> &mdash; Have any ideas about what we should get Heidi for her birthday?" },
           { divider: true, inset: true },
           { avatar: 'https://vuetifyjs.com/static/doc-images/lists/5.jpg', title: 'Recipe to try', subtitle: "<span class='text--primary'>Britta Holt</span> &mdash; We should eat this: Grate, Squash, Corn, and tomatillo Tacos." }
-        ]
+        ],
       }
     }
   }
 </script>
+
+<style>
+#review_summary {
+    text-align: center;
+    background-color: #3f4079;
+    color: #fff;
+    padding: 20px 10px;
+    border-radius: 5px;
+}
+</style>
+
+
