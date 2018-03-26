@@ -15,10 +15,10 @@
         <bread class="mt-3"/>
         <div class="bt mr-3 mb-4 mt-3">
           <div class="text-xs-center">
-            <v-btn round color="orange darken-1" dark><v-icon left >book</v-icon>Book Appointment</v-btn>
+            
           </div>
           <div class="text-xs-center">
-            <v-btn round color="purple accent-4" dark><v-icon left >comment</v-icon>Submit Review</v-btn>
+            <v-btn to="/form" round color="purple accent-4" dark><v-icon left >comment</v-icon>Submit Review</v-btn>
           </div>
           <div class="text-xs-center">
             <v-btn round color="red accent-3" dark><v-icon left >favorite</v-icon>Favorite</v-btn>
@@ -27,10 +27,10 @@
       </v-card>
 
       <!-- Grid -->
-      <v-container grid-list-md text-xs-center>
+      <v-container grid-list-md>
         <v-layout row wrap>
           <v-flex xs8>
-            <v-container grid-list-md text-xs-center>
+            <v-container grid-list-md >
               <v-layout row wrap>
                 <v-flex xs12>
                   <v-card dark color="primary">
@@ -51,7 +51,7 @@
                   </v-card>
                 </v-flex>
                 <v-flex xs12>
-                  <!-- <review /> -->
+                  <hospital-data/>
                 </v-flex>
                 <v-flex xs12>
                   <!-- <review /> -->
@@ -63,12 +63,15 @@
             </v-container>
           </v-flex>
           <v-flex xs4>
-            <v-container grid-list-md text-xs-center>
+            <v-container grid-list-md>
               <v-layout row wrap>
                 <v-flex xs12>
-                  <v-card dark>
-                    <v-card-text class="px-0">Book a visit</v-card-text>
-                     <v-card-media src="https://vuetifyjs.com/static/doc-images/lists/ali.png" height="300px">
+                  <v-card>
+                    <div id="title">
+                      <h1>Book a visit</h1>
+                      <span>Monday to Friday 09.00am-06.00pm</span>
+                    </div>
+                     <v-card-media src="https://vuetifyjs.com/static/doc-images/cards/sunshine.jpg" height="300px">
                       <v-layout column class="media">
                         <v-card-title>
                           <v-btn dark icon>
@@ -84,7 +87,7 @@
                         </v-card-title>
                         <v-spacer></v-spacer>
                         <v-card-title class="white--text pl-5 pt-5">
-                          <div class="display-1 pl-5 pt-5">Ali Conners</div>
+                          <div class="display-1  pt-5"><v-btn large round color="pink accent-4" dark><v-icon left >book</v-icon>Book Appointment</v-btn></div>
                         </v-card-title>
                       </v-layout>
                     </v-card-media>
@@ -180,6 +183,14 @@ export default {
  .upper {
     display: flex;
     justify-content: space-around;
+  }
+
+  #title {
+    background-color: #3f4079;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px 5px 0 0;
+
   }
 
 
