@@ -29,7 +29,7 @@
       <!-- Grid -->
       <v-container grid-list-md>
         <v-layout row wrap>
-          <v-flex xs8>
+          <v-flex mt-5 xs8>
             <v-container grid-list-md >
               <v-layout row wrap>
                 <v-flex xs12>
@@ -45,24 +45,27 @@
                             >
                             <img src="https://vuetifyjs.com/static/doc-images/cards/sunshine.jpg" alt="avatar">
                           </v-avatar>
+                          <div class="text-xs-center">
+                            <h1 id="hos_id">Samarth Hospital</h1>
+                          </div>
                         </div>
                       </div>
                     </div>
                   </v-card>
                 </v-flex>
-                <v-flex xs12>
+                <v-flex mt-2 xs12>
                   <hospital-data/>
                 </v-flex>
                 <v-flex xs12>
                   <!-- <review /> -->
                 </v-flex>
-                <v-flex xs12>
+                <v-flex mt-5 xs12>
                   <review />
                 </v-flex>
               </v-layout>
             </v-container>
           </v-flex>
-          <v-flex xs4>
+          <v-flex mt-5 xs4>
             <v-container grid-list-md>
               <v-layout row wrap>
                 <v-flex xs12>
@@ -144,6 +147,50 @@
                     </v-list>
                   </v-card>
                 </v-flex>
+                <v-flex mt-5 xs12>
+                  <!-- Lower Grid -->
+                  <template>
+                    <v-layout row>
+                      <v-flex xs12>
+                        <v-card>
+                          <v-list two-line subheader>
+                            <v-subheader inset>Folders</v-subheader>
+                            <v-list-tile avatar v-for="item in items" :key="item.title">
+                              <v-list-tile-avatar>
+                                <v-icon :class="[item.iconClass]">{{ item.icon }}</v-icon>
+                              </v-list-tile-avatar>
+                              <v-list-tile-content>
+                                <v-list-tile-title>{{ item.title }}</v-list-tile-title>
+                                <v-list-tile-sub-title>{{ item.subtitle }}</v-list-tile-sub-title>
+                              </v-list-tile-content>
+                              <v-list-tile-action>
+                                <v-btn icon ripple>
+                                  <v-icon color="grey lighten-1">info</v-icon>
+                                </v-btn>
+                              </v-list-tile-action>
+                            </v-list-tile>
+                            <v-divider inset></v-divider>
+                            <v-subheader inset>Files</v-subheader>
+                            <v-list-tile v-for="item in items2" :key="item.title" avatar>
+                              <v-list-tile-avatar>
+                                <v-icon :class="[item.iconClass]">{{ item.icon }}</v-icon>
+                              </v-list-tile-avatar>
+                              <v-list-tile-content>
+                                <v-list-tile-title>{{ item.title }}</v-list-tile-title>
+                                <v-list-tile-sub-title>{{ item.subtitle }}</v-list-tile-sub-title>
+                              </v-list-tile-content>
+                              <v-list-tile-action>
+                                <v-btn icon ripple>
+                                  <v-icon color="grey lighten-1">info</v-icon>
+                                </v-btn>
+                              </v-list-tile-action>
+                            </v-list-tile>
+                          </v-list>
+                        </v-card>
+                      </v-flex>
+                    </v-layout>
+                  </template>
+                </v-flex>
               </v-layout>
             </v-container>
           </v-flex>
@@ -161,7 +208,19 @@
 <script>
 import SnackBar from "@/components/SnackBar";
 export default {
-  
+  data () {
+      return {
+        items: [
+          { icon: 'folder', iconClass: 'grey lighten-1 white--text', title: 'Photos', subtitle: 'Jan 9, 2014' },
+          { icon: 'folder', iconClass: 'grey lighten-1 white--text', title: 'Recipes', subtitle: 'Jan 17, 2014' },
+          { icon: 'folder', iconClass: 'grey lighten-1 white--text', title: 'Work', subtitle: 'Jan 28, 2014' }
+        ],
+        items2: [
+          { icon: 'assignment', iconClass: 'blue white--text', title: 'Vacation itinerary', subtitle: 'Jan 20, 2014' },
+          { icon: 'call_to_action', iconClass: 'amber white--text', title: 'Kitchen remodel', subtitle: 'Jan 10, 2014' }
+        ]
+      }
+    } 
 }
 </script>
 
@@ -169,8 +228,13 @@ export default {
 .avatar {
   display: flex;
   justify-content: space-between;
+  margin-right: 20px
 
 
+}
+
+#hos_id {
+  margin-top: 55px
 }
 
 .bt {

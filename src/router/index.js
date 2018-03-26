@@ -4,6 +4,7 @@ import AppHome from '@/pages/AppHome'
 import HospitalProfile from '@/pages/HospitalProfile'
 import Landing from '@/pages/Landing'
 import Form from '@/pages/Form'
+import Temp from '@/pages/Temp'
 
 Vue.use(Router)
 
@@ -29,6 +30,11 @@ export default new Router({
       path:'/form',
       name: 'Form',
       component: Form
+    },
+    {
+      path: '/temp',
+      name: 'Temp',
+      component: Temp
     }
   ]
 })
