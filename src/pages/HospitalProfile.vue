@@ -57,7 +57,7 @@
                   <hospital-data/>
                 </v-flex>
                 <v-flex xs12>
-                  <!-- <review /> -->
+                  <rooms />
                 </v-flex>
                 <v-flex mt-5 xs12>
                   <review />
@@ -70,11 +70,11 @@
               <v-layout row wrap>
                 <v-flex xs12>
                   <v-card>
-                    <div id="title">
+                    <!-- <div id="title">
                       <h1>Book a visit</h1>
                       <span>Monday to Friday 09.00am-06.00pm</span>
-                    </div>
-                     <v-card-media src="https://vuetifyjs.com/static/doc-images/cards/sunshine.jpg" height="300px">
+                    </div> -->
+                     <v-card-media src="" height="300px">
                       <v-layout column class="media">
                         <v-card-title>
                           <v-btn dark icon>
@@ -92,6 +92,65 @@
                         <v-card-title class="white--text pl-5 pt-5">
                           <div class="display-1  pt-5"><v-btn large round color="pink accent-4" dark><v-icon left >book</v-icon>Book Appointment</v-btn></div>
                         </v-card-title>
+
+                        <!-- Pickers -->
+                        <template>
+                          <v-layout row wrap>
+                            <v-flex xs11 sm5>
+                              <v-menu
+                                ref="menu"
+                                lazy
+                                :close-on-content-click="false"
+                                v-model="menu"
+                                transition="scale-transition"
+                                offset-y
+                                full-width
+                                :nudge-right="40"
+                                min-width="290px"
+                                :return-value.sync="date"
+                              >
+                                <v-text-field
+                                  slot="activator"
+                                  label="Picker in menu"
+                                  v-model="date"
+                                  prepend-icon="event"
+                                  readonly
+                                ></v-text-field>
+                                <v-date-picker v-model="date" no-title scrollable>
+                                  <v-spacer></v-spacer>
+                                  <v-btn flat color="primary" @click="menu = false">Cancel</v-btn>
+                                  <v-btn flat color="primary" @click="$refs.menu.save(date)">OK</v-btn>
+                                </v-date-picker>
+                              </v-menu>
+                            </v-flex>
+                            <v-spacer></v-spacer>
+                            <v-flex xs11 sm5>
+                              <v-dialog
+                                ref="dialog"
+                                persistent
+                                v-model="modal"
+                                lazy
+                                full-width
+                                width="290px"
+                                :return-value.sync="date"
+                              >
+                                <v-text-field
+                                  slot="activator"
+                                  label="Picker in dialog"
+                                  v-model="date"
+                                  prepend-icon="event"
+                                  readonly
+                                ></v-text-field>
+                                <v-date-picker v-model="date" scrollable>
+                                  <v-spacer></v-spacer>
+                                  <v-btn flat color="primary" @click="modal = false">Cancel</v-btn>
+                                  <v-btn flat color="primary" @click="$refs.dialog.save(date)">OK</v-btn>
+                                </v-date-picker>
+                              </v-dialog>
+                            </v-flex>
+                          </v-layout>
+                        </template>
+
                       </v-layout>
                     </v-card-media>
                     <v-list two-line>
@@ -102,16 +161,6 @@
                         <v-list-tile-content>
                           <v-list-tile-title>(650) 555-1234</v-list-tile-title>
                           <v-list-tile-sub-title>Mobile</v-list-tile-sub-title>
-                        </v-list-tile-content>
-                        <v-list-tile-action>
-                          <v-icon>chat</v-icon>
-                        </v-list-tile-action>
-                      </v-list-tile>
-                      <v-list-tile >
-                        <v-list-tile-action></v-list-tile-action>
-                        <v-list-tile-content>
-                          <v-list-tile-title>(323) 555-6789</v-list-tile-title>
-                          <v-list-tile-sub-title>Work</v-list-tile-sub-title>
                         </v-list-tile-content>
                         <v-list-tile-action>
                           <v-icon>chat</v-icon>
@@ -210,6 +259,9 @@ import SnackBar from "@/components/SnackBar";
 export default {
   data () {
       return {
+         date: null,
+          menu: false,
+          modal: false,
         items: [
           { icon: 'folder', iconClass: 'grey lighten-1 white--text', title: 'Photos', subtitle: 'Jan 9, 2014' },
           { icon: 'folder', iconClass: 'grey lighten-1 white--text', title: 'Recipes', subtitle: 'Jan 17, 2014' },

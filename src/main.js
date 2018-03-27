@@ -19,6 +19,7 @@ import Raters from 'vue-rate-it';
 import InstantSearch from 'vue-instantsearch';
 import ReviewCard from "./components/ReviewCard.vue";
 import HospitalData from "./components/HospitalData.vue";
+import Rooms from "./components/Rooms.vue";
 
 
 Vue.component('compare-table', CompareTable );
@@ -33,6 +34,7 @@ Vue.component('jumbo', Jumbotron);
 Vue.component('star-rating', Raters.StarRating);
 Vue.component('review', ReviewCard);
 Vue.component('hospital-data', HospitalData);
+Vue.component('rooms', Rooms);
 
 Vue.use(InstantSearch);
 Vue.use(Vuetify, {
