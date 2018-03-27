@@ -1,5 +1,5 @@
 <template>
-  <v-jumbotron color="grey lighten-2">
+  <v-jumbotron color="grey lighten-4">
     <v-container fill-height>
       <v-layout align-center row wrap>
         <v-flex xs12>
@@ -18,7 +18,7 @@
               ></v-select>
           </v-flex>
         </div>
-          <v-btn round flarge color="blue" class="mx-0">Search</v-btn>
+          <v-btn round flarge color="indigo darken-4"> <span style="color:white" > Search</span></v-btn>
         </v-flex>
       </v-layout>
     </v-container>
