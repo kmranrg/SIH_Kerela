@@ -1,12 +1,11 @@
 <template>
-  <v-app>
+  <v-app id="inspire">
 
     <!-- Toolbar -->
     <v-toolbar app clipped-left color="grey lighten-2" >
       <v-icon color="black">local_hospital</v-icon>
       <span class="title ml-3 mr-5"> <b>POCKET HOSPITAL</b></span>
       <v-spacer></v-spacer>
-      <!-- <dropbtn/> -->
       <v-toolbar-items class="hidden-xs-only">
         <v-icon color="black">supervisor_account</v-icon>
         <v-btn flat><b>My Profile</b></v-btn>

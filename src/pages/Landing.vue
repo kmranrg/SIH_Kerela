@@ -2,16 +2,18 @@
   <div class="wrapper">
     <!-- Toolbar -->
     
-    <v-toolbar color="red darken-1" dark flat fixed >
-      <v-toolbar-title ><v-icon left large color="blue" ></v-icon>Hopitaux</v-toolbar-title>
-      
+    <v-toolbar color="indigo darken-4" flat fixed dark>
+      <v-toolbar-title>
+        <v-icon left color="white">local_hospital</v-icon>
+        <span style="color:white">Pocket Hospital</span>
+      </v-toolbar-title>
       <v-spacer></v-spacer>
       <v-toolbar-items class="hidden-sm-and-down">
           <v-btn flat>Quick Support</v-btn>
           <v-btn flat>Services</v-btn>
           <v-btn flat>Log In</v-btn>
           <v-btn class="black" >
-            <v-icon left>face</v-icon>Sign Up
+            <v-icon left>account_box</v-icon>Sign Up
           </v-btn>
       </v-toolbar-items>
     </v-toolbar>
@@ -320,7 +322,7 @@
           </v-carousel-item>
         </v-carousel>
       </v-layout>
-      <v-jumbotron color="grey lighten-2">
+      <v-jumbotron color="grey lighten-3">
         <v-container fill-height>
           <v-layout row wrap justify-center align-center>
             <v-flex x12 class="pt-4">
