@@ -34,8 +34,8 @@
               <v-layout row wrap>
                 <v-flex xs12>
                   <v-card dark color="primary">
-                    <div style="position:relative;">
-                      <google-maps />
+                    <div style="position:relative; ">
+                       <v-card-media src="http://himetop.wdfiles.com/local--files/hopital-necker-enfants-malades/H%C3%B4pital%20Necker-Enfants%20malades%2C%20Paris%20-%2001.JPG" height="350px">
                       <div style="position:absolute; bottom: 0; left: 0; width:100%; background: linear-gradient(0deg, rgba(0,0,0,0.7) 56%, rgba(0,0,0,0) 56%); color: white;" >
                         <div class="avatar">
                           <v-avatar
@@ -50,6 +50,7 @@
                           </div>
                         </div>
                       </div>
+                       </v-card-media>
                     </div>
                   </v-card>
                 </v-flex>
@@ -70,10 +71,11 @@
               <v-layout row wrap>
                 <v-flex xs12>
                   <v-card>
-                    <!-- <div id="title">
+                     <!-- <div id="title">
                       <h1>Book a visit</h1>
                       <span>Monday to Friday 09.00am-06.00pm</span>
                     </div> -->
+                    <google-maps>
                      <v-card-media src="" height="300px">
                       <v-layout column class="media">
                         <v-card-title>
@@ -94,7 +96,7 @@
                         </v-card-title>
 
                         <!-- Pickers -->
-                        <template>
+                        <!-- <template>
                           <v-layout row wrap>
                             <v-flex xs11 sm5>
                               <v-menu
@@ -149,17 +151,18 @@
                               </v-dialog>
                             </v-flex>
                           </v-layout>
-                        </template>
+                        </template> -->
 
                       </v-layout>
                     </v-card-media>
+                    </google-maps>
                     <v-list two-line>
                       <v-list-tile >
                         <v-list-tile-action>
                           <v-icon color="indigo">phone</v-icon>
                         </v-list-tile-action>
                         <v-list-tile-content>
-                          <v-list-tile-title>(650) 555-1234</v-list-tile-title>
+                          <v-list-tile-title>(+91) 820-9611868</v-list-tile-title>
                           <v-list-tile-sub-title>Mobile</v-list-tile-sub-title>
                         </v-list-tile-content>
                         <v-list-tile-action>
@@ -172,14 +175,14 @@
                           <v-icon color="indigo">mail</v-icon>
                         </v-list-tile-action>
                         <v-list-tile-content>
-                          <v-list-tile-title>aliconnors@example.com</v-list-tile-title>
+                          <v-list-tile-title>rajdeep.sharma17@gmail.com</v-list-tile-title>
                           <v-list-tile-sub-title>Personal</v-list-tile-sub-title>
                         </v-list-tile-content>
                       </v-list-tile>
                       <v-list-tile >
                         <v-list-tile-action></v-list-tile-action>
                         <v-list-tile-content>
-                          <v-list-tile-title>ali_connors@example.com</v-list-tile-title>
+                          <v-list-tile-title>rajdeep.sharma17@outlook.com</v-list-tile-title>
                           <v-list-tile-sub-title>Work</v-list-tile-sub-title>
                         </v-list-tile-content>
                       </v-list-tile>
@@ -203,7 +206,7 @@
                       <v-flex xs12>
                         <v-card>
                           <v-list two-line subheader>
-                            <v-subheader inset>Folders</v-subheader>
+                            <v-subheader inset>Gallery</v-subheader>
                             <v-list-tile avatar v-for="item in items" :key="item.title">
                               <v-list-tile-avatar>
                                 <v-icon :class="[item.iconClass]">{{ item.icon }}</v-icon>
@@ -219,7 +222,7 @@
                               </v-list-tile-action>
                             </v-list-tile>
                             <v-divider inset></v-divider>
-                            <v-subheader inset>Files</v-subheader>
+                            <v-subheader inset>Blogs</v-subheader>
                             <v-list-tile v-for="item in items2" :key="item.title" avatar>
                               <v-list-tile-avatar>
                                 <v-icon :class="[item.iconClass]">{{ item.icon }}</v-icon>
@@ -264,12 +267,11 @@ export default {
           modal: false,
         items: [
           { icon: 'folder', iconClass: 'grey lighten-1 white--text', title: 'Photos', subtitle: 'Jan 9, 2014' },
-          { icon: 'folder', iconClass: 'grey lighten-1 white--text', title: 'Recipes', subtitle: 'Jan 17, 2014' },
-          { icon: 'folder', iconClass: 'grey lighten-1 white--text', title: 'Work', subtitle: 'Jan 28, 2014' }
+          { icon: 'folder', iconClass: 'grey lighten-1 white--text', title: 'Archives', subtitle: 'Jan 17, 2014' },
         ],
         items2: [
-          { icon: 'assignment', iconClass: 'blue white--text', title: 'Vacation itinerary', subtitle: 'Jan 20, 2014' },
-          { icon: 'call_to_action', iconClass: 'amber white--text', title: 'Kitchen remodel', subtitle: 'Jan 10, 2014' }
+          { icon: 'assignment', iconClass: 'blue white--text', title: 'Sudden Cardiac Arrest', subtitle: 'Jan 20, 2014' },
+          { icon: 'assignment', iconClass: 'blue white--text', title: 'Migraine', subtitle: 'Jan 10, 2014' }
         ]
       }
     } 
