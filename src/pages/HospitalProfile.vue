@@ -2,27 +2,33 @@
   <v-app>
 
     <!-- Toolbar -->
-    <v-toolbar app clipped-left>
-      <v-toolbar-side-icon @click.native.stop="drawer = !drawer"></v-toolbar-side-icon>
-      <span class="title ml-3 mr-5"><router-link to="/">Path Finder</router-link></span>
+    <v-toolbar app clipped-left color="grey lighten-2" >
+      <v-icon color="black">local_hospital</v-icon>
+      <span class="title ml-3 mr-5"> <b>POCKET HOSPITAL</b></span>
       <v-spacer></v-spacer>
-      <dropbtn/>
+      <!-- <dropbtn/> -->
+      <v-toolbar-items class="hidden-xs-only">
+        <v-icon color="black">supervisor_account</v-icon>
+        <v-btn flat><b>My Profile</b></v-btn>
+        <v-btn flat><b>Sign-out</b></v-btn>
+      </v-toolbar-items>
     </v-toolbar>
     <v-content>
 
       <!-- Upper Card -->
-      <v-card dark color="black" class="upper">
-        <bread class="mt-3"/>
+      <v-card dark color="black" class="upper" flat>
+        <div class="my-2">
+          <bread style="margin-left:90px;"/>
+        </div>
         <div class="bt mr-3 mb-4 mt-3">
           <div class="text-xs-center">
-            
           </div>
-          <div class="text-xs-center">
+          <!-- <div class="text-xs-center">
             <v-btn to="/form" round color="purple accent-4" dark><v-icon left >comment</v-icon>Submit Review</v-btn>
           </div>
           <div class="text-xs-center">
             <v-btn round color="red accent-3" dark><v-icon left >favorite</v-icon>Favorite</v-btn>
-          </div>      
+          </div>       -->
         </div>
       </v-card>
 
@@ -300,7 +306,7 @@ export default {
 
  .upper {
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-start;
   }
 
   #title {
