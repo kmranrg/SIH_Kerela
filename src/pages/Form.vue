@@ -91,7 +91,6 @@
                 <v-container>
                   <div id="thumb">
                       <v-icon color="blue" class="mr-5" size="60px">thumb_up</v-icon>
-                      
                       <v-icon color="red" size="60px">thumb_down</v-icon>
                    </div>   
                 </v-container>                
