@@ -85,6 +85,16 @@
                 <v-flex mt-5 ml-5 pl-5><v-flex ml-5 pl-5><v-flex ml-5 pl-5><v-flex ml-5 pl-5><v-flex ml-5 pl-5>
                 <star-rating></star-rating></v-flex></v-flex></v-flex></v-flex></v-flex>
         </v-card-text>
+        <v-card-text>
+            <div class="display-3 feedback">Would you like to recommend us !</div>
+                
+                <v-container>
+                  <div id="thumb">
+                      <v-icon color="blue" class="mr-5" size="60px">thumb_up</v-icon>
+                      <v-icon color="red" size="60px">thumb_down</v-icon>
+                   </div>   
+                </v-container>                
+        </v-card-text>
         </v-card>
         <v-btn round color="grey lighten-1" @click.native="e1 = 1">Submit</v-btn>
         <v-btn round flat>Cancel</v-btn>
@@ -98,6 +108,7 @@
   export default {
     data () {
       return {
+        switch1: true,
         value6: 50,
         e1: 0,
         valid: false,
@@ -116,3 +127,10 @@
     }
   }
 </script>
+
+<style>
+#thumb {
+  display: flex;
+  justify-content: center
+}
+</style>

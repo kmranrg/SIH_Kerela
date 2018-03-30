@@ -17,7 +17,7 @@
           </v-btn>
       </v-toolbar-items>
     </v-toolbar>
-    <jumbo/>
+    <banner/>
 
     <v-container grid-list-md text-xs-center>
       <v-layout row wrap class="white pt-2">
