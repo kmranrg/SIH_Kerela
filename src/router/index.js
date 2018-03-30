@@ -7,6 +7,7 @@ import Form from '@/pages/Form'
 import Temp from '@/pages/Temp'
 import pwo from '@/pages/pwo'
 import ReportIssue from '@/pages/ReportIssue'
+import LoginPanel from '@/pages/LoginPanel'
 
 Vue.use(Router)
 
@@ -37,6 +38,11 @@ export default new Router({
       path:'/ReportIssue',
       name: 'ReportIssue',
       component: ReportIssue
+    },
+    {
+      path:'/LoginPanel',
+      name: 'LoginPanel',
+      component: LoginPanel
     },
     {
       path:'/pwo',
