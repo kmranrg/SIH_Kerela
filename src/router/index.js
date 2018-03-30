@@ -6,6 +6,7 @@ import Landing from '@/pages/Landing'
 import Form from '@/pages/Form'
 import Temp from '@/pages/Temp'
 import pwo from '@/pages/pwo'
+import ReportIssue from '@/pages/ReportIssue'
 
 Vue.use(Router)
 
@@ -31,6 +32,11 @@ export default new Router({
       path:'/form',
       name: 'Form',
       component: Form
+    },
+    {
+      path:'/ReportIssue',
+      name: 'ReportIssue',
+      component: ReportIssue
     },
     {
       path:'/pwo',
