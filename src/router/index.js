@@ -8,6 +8,7 @@ import Temp from '@/pages/Temp'
 import pwo from '@/pages/pwo'
 import ReportIssue from '@/pages/ReportIssue'
 import LoginPanel from '@/pages/LoginPanel'
+import RegisterPanel from '@/pages/RegisterPanel'
 
 Vue.use(Router)
 
@@ -43,6 +44,11 @@ export default new Router({
       path:'/LoginPanel',
       name: 'LoginPanel',
       component: LoginPanel
+    },
+    {
+      path:'/RegisterPanel',
+      name: 'RegisterPanel',
+      component: RegisterPanel
     },
     {
       path:'/pwo',
